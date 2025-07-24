@@ -13,3 +13,14 @@ requiredFiles = [".replit", "replit.nix"]
 [deployment]
 run = ["python3", "main.py"]
 deploymentTarget = "cloudrun"
+
+[workflows]
+
+[[workflows.workflow]]
+name = "devops test 1"
+mode = "sequential"
+author = 45451017
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python -m pytest"
